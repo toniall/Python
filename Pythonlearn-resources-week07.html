@@ -1,0 +1,266 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+a[href^="http://"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}
+a[href^="https://"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+</style>
+</head>
+<body>
+<!-- This is an archive of a MediaWiki site - some links might be broken -->
+<div id="content">
+				<a id="top"></a>
+	        		        	<h1 id="firstHeading" class="firstHeading">Pythonlearn:resources-week07</h1>
+				<div id="bodyContent">
+		            <h3 id="siteSub">From Coursera</h3>
+		            <div id="contentSub"></div>
+		            		            		            					<!-- start content -->
+					<div lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/index.php/Pythonlearn:Resources" title="Pythonlearn:Resources"> Back to Resources</a></p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Lecture_Notes"><span class="tocnumber">1</span> <span class="toctext">Lecture Notes</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Working_with_files"><span class="tocnumber">1.1</span> <span class="toctext">Working with files</span></a>
+<ul>
+<li class="toclevel-3"><a href="#The_newline_character"><span class="tocnumber">1.1.1</span> <span class="toctext">The newline character</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Code_patterns"><span class="tocnumber">1.2</span> <span class="toctext">Code patterns</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Counting_lines_in_a_file"><span class="tocnumber">1.2.1</span> <span class="toctext">Counting lines in a file</span></a></li>
+<li class="toclevel-3"><a href="#Reading_the_whole_file"><span class="tocnumber">1.2.2</span> <span class="toctext">Reading the whole file</span></a></li>
+<li class="toclevel-3"><a href="#Searching_through_a_file"><span class="tocnumber">1.2.3</span> <span class="toctext">Searching through a file</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Chapter_7_Exercises"><span class="tocnumber">2</span> <span class="toctext">Chapter 7 Exercises</span></a>
+<ul>
+<li class="toclevel-2"><a href="#The_exercises_with_file_introduce_the_idea_of_opening_a_text_file_and_choosing_a_handle_to_it."><span class="tocnumber">2.1</span> <span class="toctext">The exercises with file introduce the idea of opening a text file and choosing a handle to it.</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Opening"><span class="tocnumber">2.1.1</span> <span class="toctext">Opening</span></a></li>
+<li class="toclevel-3"><a href="#Working_the_data"><span class="tocnumber">2.1.2</span> <span class="toctext">Working the data</span></a></li>
+<li class="toclevel-3"><a href="#Create_and_write_in_a_file"><span class="tocnumber">2.1.3</span> <span class="toctext">Create and write in a file</span></a></li>
+<li class="toclevel-3"><a href="#Closing_the_file"><span class="tocnumber">2.1.4</span> <span class="toctext">Closing the file</span></a></li>
+<li class="toclevel-3"><a href="#Printing_the_results"><span class="tocnumber">2.1.5</span> <span class="toctext">Printing the results</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#More_Resource_Topics"><span class="tocnumber">3</span> <span class="toctext">More Resource Topics</span></a>
+<ul>
+<li class="toclevel-2"><a href="#File_names_and_paths:"><span class="tocnumber">3.1</span> <span class="toctext">File names and paths:</span></a>
+<ul>
+<li class="toclevel-3"><a href="#For_Windows:"><span class="tocnumber">3.1.1</span> <span class="toctext">For Windows:</span></a></li>
+<li class="toclevel-3"><a href="#For_Unix_.2F_Unix-like_.28Linux.2C_.5BMac.5D_OS_X.2C_etc.29"><span class="tocnumber">3.1.2</span> <span class="toctext">For Unix / Unix-like (Linux, [Mac] OS X, etc)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Using_try.2C_except.2C_and_open"><span class="tocnumber">4</span> <span class="toctext">Using try, except, and open</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Lecture_Notes">Lecture Notes</span></h1>
+<h2> <span class="mw-headline" id="Working_with_files">Working with files</span></h2>
+<p>Before Python can access file information it must "open" the file. open() is the built-in function which tells Python to open the file. open() takes two parameters 'filename' and 'mode'. If you leave the second parameter off 'open(filename)' Python will simply open the file in read mode ('r'). Opening a file does not cause Python to read all the data in the file, but it makes the information in the file available to Python to use - it creates a connection between Python and the file on the hard drive, referred to as a "Handle".</p>
+<p>If the file cannot be found you will receive a traceback error.</p>
+<h3> <span class="mw-headline" id="The_newline_character">The newline character</span></h3>
+<p>'\n' represents a newline. Newline is one character, even though it is represented by two.</p>
+<h2> <span class="mw-headline" id="Code_patterns">Code patterns</span></h2>
+<h3> <span class="mw-headline" id="Counting_lines_in_a_file">Counting lines in a file</span></h3>
+<p><pre>
+fhand = open(&quot;words.txt&quot;)
+count = 0
+for line in fhand:
+    count = count + 1
+print &quot;line count&quot;, count
+</pre></p>
+<h3> <span class="mw-headline" id="Reading_the_whole_file">Reading the whole file</span></h3>
+<p><pre>
+fhand =  open(&quot;words.txt&quot;)
+inp = fhand.read() # reads the whole file into memory
+print len(inp)# returns the number of characters in a file
+print inp # prints the whole file
+</pre></p>
+<h3> <span class="mw-headline" id="Searching_through_a_file">Searching through a file</span></h3>
+<p><pre>
+fhand= open(&quot;mbox-short.txt&quot;)
+for line in fhand:
+    # line = line.rstrip()
+    if line.startswith(&quot;From &quot;):
+        print line
+</pre>
+<ul><li>note that methods something.strip() or something.rstrip() should be used to get rid of the extra \n (new line character). </p>
+</li></ul>
+<h1> <span class="mw-headline" id="Chapter_7_Exercises"><a href="/wiki/index.php/Pythonlearn:exercises-chapter07" title="Pythonlearn:exercises-chapter07"> Chapter 7 Exercises</a></span></h1>
+<p>The above page is intended as a place for students to work out solutions and answers to the exercises from the textbook. Please do not post answers to exercises that are actual graded assignments.</p>
+<h2> <span class="mw-headline" id="The_exercises_with_file_introduce_the_idea_of_opening_a_text_file_and_choosing_a_handle_to_it.">The exercises with file introduce the idea of opening a text file and choosing a handle to it.</span></h2>
+<p>In both tasks we need only to read. Therefore most of the exercises will start with a open/ handle idiom:</p>
+<h3> <span class="mw-headline" id="Opening">Opening</span></h3>
+<p><pre>
+inp = raw_input(&quot;Enter file name&quot;)# asks for a file name
+fhand= open(inp) # handling the file
+</pre></p>
+<p>A more elegant idiom includes a guardian
+<pre>
+inp = raw_input(&quot;Enter file name&quot;)# asks for a file name
+try:
+    fhand= open(inp) # handling the file
+except:
+    print &quot;Invalid filename&quot;
+    exit()
+</pre></p>
+<p>The try/except means  to Py "try to open the file. In case the file cannot be opened, print invalid filename and kill the program".</p>
+<h3> <span class="mw-headline" id="Working_the_data">Working the data</span></h3>
+<p>Most of the exercises will ask to: 
+<ul><li> Count or print the lines
+</li><li> Find a line with specific data: (e-mail, server name, hours, dates, etc.)</p>
+</li></ul>
+
+<p>To run this tasks we usually use a for loop</p>
+<pre>
+fhand = open(&quot;words.txt&quot;)
+#before the loop you may need to set counters
+for line in fhand:
+#after the loop you will give instructions on what needs to be done to each line
+</pre>
+<p>Some examples of the full loops are described above in the section "code patterns"</p>
+<h3> <span class="mw-headline" id="Create_and_write_in_a_file">Create and write in a file</span></h3>
+<p>In the lecture it's all about how to open and read a file. So here is a very simple example about how to create a file and write something in it.</p>
+<p>The code below will read the file 'mbox.txt', and find all emails from 'umich.edu', and write these email addresses into a file named 'emailaddress.txt'</p>
+<pre>
+fhand = open('mbox.txt','r')
+whand = open('mailaddress.txt','w')
+for line in fhand:
+    if line.startswith('From:') and line.endswith('umich.edu\n'):#don't forget the newline '\n', otherwise you will get nothing in your new file 
+        whand.write(line[6:])#I simply count the index number, in fact you may use 'find' or something
+fhand.close()
+whand.close()
+</pre>
+<h3> <span class="mw-headline" id="Closing_the_file">Closing the file</span></h3>
+<p>Though not mentioned in the lecture, it's really useful to close the file handle you opened earlier with <code>open</code> once we're done reading the file contents. This mightn't make a big difference with small files we're reading throughout the course, but it'll help python(and the operating system underneath) to optimize its resource usage by telling python and the OS that they can release resources allocated for the file. Opening files typically involves allocating and managing buffers under the hood, and closing a file allows python to flush these buffer and give back their resources so that they can be used by other programs.</p>
+<p>To close a file, simply call <code>close</code> on the file handle obtained from <code>open</code>.
+<pre>
+fhand.close()
+</pre>
+<p>A complete scenario for dealing with a file would thus look like this:
+</p>
+<pre>
+fhand = open(&quot;words.txt&quot;)
+&#35; Do whatever you like with the file contents here, like reading them through a loop.
+fhand.close()  # Close the file.
+</pre>
+<p>An even more elegant way to write the previous scenario is to use the <code>with</code> statement:
+</p>
+<pre>
+with open(&quot;words.txt&quot;) as fhand:
+    # Do whatever you want here with the file contents.
+</pre>
+Note that there's no need to explicitly close the file here, since a <code>with</code> statement automatically calls <code>close</code> on the file handle once the last statement in its block is executed. <code>fhand</code> is only usable inside the <code>with</code> statement, that is, inside the code block indented under <code>with</code>.</p>
+<p>The <code>with</code> statement is a python construct that can be used for some other types as well, in situations where scoped resource management is desired. The <code>with</code> statement entails some deeper details on objects it can be used with, and file handles satisfy those requirements to be used with the <code>with</code> statement. The <code>with</code> statement comes handy here for ensuring resources associated with file handling are managed correctly.</p>
+<h3> <span class="mw-headline" id="Printing_the_results">Printing the results</span></h3>
+<p>When the loop is finished you should print you results (e.g. the whole file, the total number of lines, all the lines containing e-mail addresses.</p>
+<h1> <span class="mw-headline" id="More_Resource_Topics">More Resource Topics</span></h1>
+<p>Add resources for this chapter to this page..</p>
+<h2> <span class="mw-headline" id="File_names_and_paths:">File names and paths:</span></h2>
+<p>The filename can also be an absolute or relative path.</p>
+<h3> <span class="mw-headline" id="For_Windows:">For Windows:</span></h3>
+<p>On Windows machines, all backslashes must be doubled.</p>
+<h3> <span class="mw-headline" id="For_Unix_.2F_Unix-like_.28Linux.2C_.5BMac.5D_OS_X.2C_etc.29">For Unix / Unix-like (Linux, [Mac] OS X, etc)</span></h3>
+<p>On Unix / Unix-like machines, forward slashes don't need any special treatment. However, you may notice the ~ shortcut doesn't work. Actually <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Path_%28computing%29#Absolute_and_relative_paths">relative path</a>s don't work. You must write full path.</p>
+<p>A solution:</p>
+<code><pre>fname = raw_input(&quot;Enter a file name: &quot;)
+    if fname[0:2] == &quot;~/&quot;: #Check to see if it starts with a ~ and a slash
+        #If it doesn't start with the ~/, then 
+        #the user could be referring to a valid file
+        #like &quot;~.py&quot; (I checked: it is possible.)
+        #notice below replace is valid on Mac OSX only (and not a good approach overall, cause not portable at all)
+        fname = fname.replace('~',&quot;/Users/&quot;+raw_input(&quot;Enter your short user name: &quot;),1)
+workingfname = fname.replace(&quot;\\&quot;,'') #This for proper escaping of a valid folder named '~' as '\~', you can also use './~' as Python automatically escapes for you.
+#go back to normal program now
+handle = open(workingfname,'r') # . . .
+for line in handle:
+    print line
+print &quot;\n&quot;+(&quot;That was &quot;+fname+&quot;.&quot;).center(40)
+</pre></code>
+<p>Naturally, no need to ask the user for their short name if there's only one user, just replace the italicized code with the path to your home folder. You could even confuse things by redefining the ~ as a shortcut to the folder that has all your python code! (or select another letter to use as a wildcard.)</p>
+<h1> <span class="mw-headline" id="Using_try.2C_except.2C_and_open">Using try, except, and open</span></h1>
+<p>Exemple (<a rel="nofollow" class="external free" href="http://www.pythonlearn.com/html-270/book008.html">http://www.pythonlearn.com/html-270/book008.html</a> - 7.7  Using try, except, and open)</p>
+<pre>
+fhand = raw_input('Enter the file name: ')
+while True:
+    try:
+        var_text = open('C:\\...path...\\%s.txt'&#160;% (fhand), 'r')
+        for line in var_text:
+            line = line.rstrip()
+            if not '@uct.ac.za' in line:
+                continue
+            print line
+            
+    except:
+        print 'Not Found'
+        fhand = raw_input('Enter the file name: ')
+        continue
+        
+    quit()
+</pre>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 110/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+
+</div><div class="printfooter">
+Retrieved from "<a href="https://share.coursera.org/wiki/index.php?title=Pythonlearn:resources-week07&amp;oldid=34263">https://share.coursera.org/wiki/index.php?title=Pythonlearn:resources-week07&amp;oldid=34263</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+									</div>
+			</div><hr/>
+<a href="/wiki/index.php/Pythonlearn:Main">Back to Pythonlearn</a>
+<a href="/wiki/index.php">Back to all categories</a>
+<p><small>This is an archive of a MediaWiki site - some links might be broken.<br/>
+<a href="#" onclick="$('#about').show();$('#about_link').hide();return false;"
+    id="about_link">About the software</a>
+<span style="display: none" id="about">This data was spidered using the 
+<a href="https://github.com/csev/wikiextract" target="_blank">WikiExtract</a>
+software developed by <a href="http://www.dr-chuck.com/" target="_blank">Charles R. Severance.</a>
+</span></small></p>
+
+<script type="text/javascript">/*<![CDATA[*/
+
+  // http://www.w3schools.com/jquery/jquery_get_started.asp
+  $(document).ready(function(){
+    
+    // external links to new window
+    $('a[href^="http://"]').not('a[href*=mydomainname]').attr('target','_blank');
+    $('a[href^="https://"]').not('a[href*=mydomainname]').attr('target','_blank');
+    
+    // force PDF Files to open in new window
+    $('a[href$=".pdf"]').attr('target', '_blank');
+
+  });
+
+ /*]]>*/</script>
+</body>

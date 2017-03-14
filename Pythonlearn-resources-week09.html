@@ -1,0 +1,173 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+a[href^="http://"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}
+a[href^="https://"] {
+    background: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png)     center right no-repeat;
+    padding-right: 13px;
+}
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+</style>
+</head>
+<body>
+<!-- This is an archive of a MediaWiki site - some links might be broken -->
+<div id="content">
+				<a id="top"></a>
+	        		        	<h1 id="firstHeading" class="firstHeading">Pythonlearn:resources-week09</h1>
+				<div id="bodyContent">
+		            <h3 id="siteSub">From Coursera</h3>
+		            <div id="contentSub"></div>
+		            		            		            					<!-- start content -->
+					<div lang="en" dir="ltr" class="mw-content-ltr"><p><a href="/wiki/index.php/Pythonlearn:Resources" title="Pythonlearn:Resources"> Back to Resources</a></p>
+<table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#Lecture_Notes"><span class="tocnumber">1</span> <span class="toctext">Lecture Notes</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Dictionaries"><span class="tocnumber">1.1</span> <span class="toctext">Dictionaries</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Using_Dictionary_to_tally.2Fcount_items"><span class="tocnumber">1.1.1</span> <span class="toctext">Using Dictionary to tally/count items</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2"><a href="#Few_more_methods_to_iterate_a_dictionary_using_example_9C.27s_dictionary"><span class="tocnumber">1.2</span> <span class="toctext">Few more methods to iterate a dictionary using example 9C's dictionary</span></a>
+<ul>
+<li class="toclevel-3"><a href="#Exercises_previously_posted_here_have_been_moved_and_can_be_accessed_through_the_Chapter_9_Exercises_link_below."><span class="tocnumber">1.2.1</span> <span class="toctext">Exercises previously posted here have been moved and can be accessed through the Chapter 9 Exercises link below.</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#Chapter_9_Exercises"><span class="tocnumber">2</span> <span class="toctext">Chapter 9 Exercises</span></a></li>
+<li class="toclevel-1"><a href="#More_Resource_Topics"><span class="tocnumber">3</span> <span class="toctext">More Resource Topics</span></a></li>
+</ul>
+</td></tr></table>
+<h1> <span class="mw-headline" id="Lecture_Notes">Lecture Notes</span></h1>
+<p><strong>Examples below come from Chapter 9 Video</strong></p>
+<p>List - a linear collection of ordered values.</p>
+<p>Dictionary - an assortment of unordered labeled values, similar to a database</p>
+<h2> <span class="mw-headline" id="Dictionaries">Dictionaries</span></h2>
+<p>Different names for Dictionaries:<br />
+<ul><li> Associative Arrays - Perl/Php<br />
+</li><li> Properties of Map or HashMap - Java<br />
+</li><li> Property Bag - C#/.Net<br />
+</li></ul>
+An example of working with Dictionaries (9A):    </p>
+<code><pre>purse = dict()  
+
+purse['money'] = 12  
+purse['candy'] = 3  
+purse['tissues'] = 75  
+print purse  
+</pre></code>
+<p>Output:<br />
+{'money':12,'tissues':75,'candy':3}
+The output shows both the key('money') and the value ('12'). The value can be modified, like with lists.<br />
+For example (9B):  </p>
+<code><pre>purse['candy'] = purse['candy'] + 2  
+</pre></code>
+<p>Will change the value of 'candy' to 5.  </p>
+<p>Dictionaries are like Lists except that they use keys('money') instead of numbers to look up values. (Lists are ordered, Dictionaries are not and so rely on keys for lookup)  </p>
+<p>Dictionary literals (constants) use curly braces {} and have a list of key&#160;: value pairs. As usual for dictionaries, the list is unordered.  </p>
+<h3> <span class="mw-headline" id="Using_Dictionary_to_tally.2Fcount_items">Using Dictionary to tally/count items</span></h3>
+<p>The "in/not in" operators can be used to see if a key exists in the dictionary - without resulting in a traceback error.</p>
+<p>Example (9C):  </p>
+<code><pre>counts = dict()  
+names = ['csev','owen','csev','zqian','cwen']  
+for name in names:  
+  if name not in counts:  
+    counts[name]= 1  
+  else:  
+    counts[name] = counts[name] + 1  
+print counts  
+</pre></code>
+<p>The above operation is so common, that the method 'get' does it for us.  </p>
+<code><pre>print counts.get(name,0)  
+</pre></code>
+<p>Performs the same operation as:  </p>
+<code><pre>if name in counts:  
+  return counts[name]  
+else:  
+  retrun 0  
+</pre></code>
+<p>So, example 9C can be simplified down to 9D, below:</p>
+<p>Example (9D):</p>
+<code><pre>counts = dict()  
+names = ['csev','owen','csev','zqian','cwen']  
+for name in names:  
+  counts[name] = counts.get(name,0) + 1  
+print counts  
+</pre></code>
+<h2> <span class="mw-headline" id="Few_more_methods_to_iterate_a_dictionary_using_example_9C.27s_dictionary">Few more methods to iterate a dictionary using example 9C's dictionary</span></h2>
+<p>Iterate over keys: counts.keys():</p>
+<code><pre>for name in counts.keys():
+  print name
+</pre></code>
+<p>Iterate over the values in a dictionary: counts.values():</p>
+<code><pre>for occurrence in counts.values():
+  print occurrence
+</pre></code>
+<p>Iterate over the elements ((key, value) pairs) in a dictionary&#160;: counts.items():</p>
+<code><pre>for name,occurrence in counts.items():
+  print name, occurrence
+</pre></code>
+<h3> <span class="mw-headline" id="Exercises_previously_posted_here_have_been_moved_and_can_be_accessed_through_the_Chapter_9_Exercises_link_below.">Exercises previously posted here have been moved and can be accessed through the Chapter 9 Exercises link below.</span></h3>
+<h1> <span class="mw-headline" id="Chapter_9_Exercises"><a href="/wiki/index.php/Pythonlearn:exercises-chapter09" title="Pythonlearn:exercises-chapter09"> Chapter 9 Exercises</a></span></h1>
+<p>The above page is intended as a place for students to work out solutions and answers to the exercises from the textbook. Please do not post answers to exercises that are actual graded assignments.</p>
+<h1> <span class="mw-headline" id="More_Resource_Topics">More Resource Topics</span></h1>
+<p>Add resources for this chapter to this page..</p>
+<p><a rel="nofollow" class="external text" href="https://www.jeffknupp.com/blog/2015/08/30/python-dictionaries/">Python Dictionaries - https://www.jeffknupp.com/blog/2015/08/30/python-dictionaries/</a></p>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 89/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+
+</div><div class="printfooter">
+Retrieved from "<a href="https://share.coursera.org/wiki/index.php?title=Pythonlearn:resources-week09&amp;oldid=34459">https://share.coursera.org/wiki/index.php?title=Pythonlearn:resources-week09&amp;oldid=34459</a>"</div>
+					<div id='catlinks' class='catlinks catlinks-allhidden'></div>					<!-- end content -->
+									</div>
+			</div><hr/>
+<a href="/wiki/index.php/Pythonlearn:Main">Back to Pythonlearn</a>
+<a href="/wiki/index.php">Back to all categories</a>
+<p><small>This is an archive of a MediaWiki site - some links might be broken.<br/>
+<a href="#" onclick="$('#about').show();$('#about_link').hide();return false;"
+    id="about_link">About the software</a>
+<span style="display: none" id="about">This data was spidered using the 
+<a href="https://github.com/csev/wikiextract" target="_blank">WikiExtract</a>
+software developed by <a href="http://www.dr-chuck.com/" target="_blank">Charles R. Severance.</a>
+</span></small></p>
+
+<script type="text/javascript">/*<![CDATA[*/
+
+  // http://www.w3schools.com/jquery/jquery_get_started.asp
+  $(document).ready(function(){
+    
+    // external links to new window
+    $('a[href^="http://"]').not('a[href*=mydomainname]').attr('target','_blank');
+    $('a[href^="https://"]').not('a[href*=mydomainname]').attr('target','_blank');
+    
+    // force PDF Files to open in new window
+    $('a[href$=".pdf"]').attr('target', '_blank');
+
+  });
+
+ /*]]>*/</script>
+</body>
